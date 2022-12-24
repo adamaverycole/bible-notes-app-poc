@@ -1,0 +1,20 @@
+<p>list-notes works!</p>
+
+<app-note-detail [Note]="SelectedNote"></app-note-detail>
+
+<h2>Notes {{ Notes.keys.length }}</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let note of Notes | keyvalue" (click)="onSelect(note.value)">
+      <th scope="row" class="">
+        <span class="">[{{ note.value.Title }}]</span>
+      </th>
+      <td>{{ note.value.Note }}</td>
+    </tr>
+  </tbody>
+</table>

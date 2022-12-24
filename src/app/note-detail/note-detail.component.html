@@ -1,0 +1,10 @@
+<p>note-detail works!</p>
+
+<!-- <pre>{{ Note$ | async | json }}</pre>
+<pre>{{ Note$ | async | json }}</pre> -->
+<div *ngIf="Note">
+  <input type="hidden" id="id" [(ngModel)]="Note.Id" />
+  <input type="text" id="title" [(ngModel)]="Note.Title" placeholder="title" />
+  <br />
+  <textarea id="note" [(ngModel)]="Note.Note" rows="30" cols="120"></textarea>
+</div>
